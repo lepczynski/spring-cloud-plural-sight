@@ -1,4 +1,4 @@
-package pl.lepi.springcloudpluralsight;
+package pl.lepi.springcloudpluralsight.discovery.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
