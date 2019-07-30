@@ -3,6 +3,7 @@ package pl.lepi.springcloudpluralsight.client;
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.discovery.EurekaClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -24,6 +25,12 @@ public class Application {
 	@Inject
 	EurekaClient eurekaClient;
 
+	// for config from Spring Cloud Config Server
+	@Autowired
+	private ConfigClientConfiguration properties;
+	@Value("${some.other.property}")
+	private String someOtherProperty;
+
 //	// Spring discovery client instead of Eureka
 //	@Inject
 //	DiscoveryClient springClient;
@@ -35,6 +42,16 @@ public class Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
+	}
+
+	@RequestMapping("/config")
+	public String printConfig() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(properties.getProperty());
+		sb.append(" || ");
+		sb.append(someOtherProperty);
+
+		return sb.toString();
 	}
 
 	@RequestMapping("/")
