@@ -44,6 +44,7 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 
+	// present properties set-up from a config server with GIT set as a source
 	@RequestMapping("/config")
 	public String printConfig() {
 		StringBuilder sb = new StringBuilder();
@@ -54,6 +55,7 @@ public class Application {
 		return sb.toString();
 	}
 
+	// find a service using netflix Eureka Discovery Server
 	@RequestMapping("/")
 	public String callService() {
 		RestTemplate restTemplate = restTemplateBuilder.build();
