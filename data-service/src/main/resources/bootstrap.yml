@@ -12,7 +12,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
 
-// This would make sense with more instances - IDEA Ultimate with Spring Boot  run configs
+#This would make sense with more instances - IDEA Ultimate with Spring Boot  run configs
 service:
   instance:
     name: data.service.instance.name
