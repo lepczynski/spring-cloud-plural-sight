@@ -8,7 +8,8 @@ spring:
         service-id: configuration-server
       server:
         git:
-          uri: git clone ssh://git@lepi.pl:443/git/spring-cloud-test-config
+          uri: https://github.com/lepczynski/spring-cloud-plural-sight-config-repo.git
+#          uri: git clone ssh://git@lepi.pl:443/git/spring-cloud-test-config
 
 eureka:
   client:

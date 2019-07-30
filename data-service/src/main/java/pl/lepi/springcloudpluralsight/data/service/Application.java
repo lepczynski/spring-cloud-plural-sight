@@ -21,7 +21,8 @@ public class Application {
 
 	@RequestMapping("/")
 	public String message() {
-		return "Serwus at your service! {^_^}";
+		return "<h1>Serwus at your servooce! {^_^}\n["
+                + instance + " :instanceName]</h1>";
 	}
 
 }
