@@ -40,7 +40,7 @@ public class Application {
 	@RequestMapping("/")
 	public String callService() {
 		RestTemplate restTemplate = restTemplateBuilder.build();
-		InstanceInfo instanceInfo = eurekaClient.getNextServerFromEureka("service2", false);
+		InstanceInfo instanceInfo = eurekaClient.getNextServerFromEureka("data.service", false);
 		String baseUrl = instanceInfo.getHomePageUrl();
 		ResponseEntity<String> response =
 				restTemplate.exchange(baseUrl, HttpMethod.GET, null, String.class);

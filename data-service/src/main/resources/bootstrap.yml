@@ -1,6 +1,6 @@
 spring:
   application:
-    name: service2
+    name: data.service
   cloud:
     config:
       discovery:
@@ -15,4 +15,4 @@ eureka:
 // This would make sense with more instances - IDEA Ultimate with Spring Boot  run configs
 service:
   instance:
-    name: service2b
+    name: data.service.instance.name
