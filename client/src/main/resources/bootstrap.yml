@@ -3,8 +3,8 @@ spring:
     name: cloud-client
   cloud:
 #    Config First config bootstrapping
-    config:
-      uri: http://localhost:8888
+#    config:
+#      uri: http://localhost:8888
 #    Discovery First config bootstrapping
     discovery:
       enabled: true
