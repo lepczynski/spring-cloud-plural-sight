@@ -8,7 +8,7 @@ spring:
         service-id: configuration-server
       server:
         git:
-          uri: git@lepi.pl:spring-cloud-test-config
+          uri: git clone ssh://git@lepi.pl:443/git/spring-cloud-test-config
 
 eureka:
   client:
